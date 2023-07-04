@@ -18,6 +18,10 @@
 		E06023512A541D0900C4F84A /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E060234F2A541D0900C4F84A /* HomeViewController.xib */; };
 		E06023532A541D1800C4F84A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06023522A541D1800C4F84A /* HomeViewModel.swift */; };
 		E06023552A54213B00C4F84A /* UICollectionView+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06023542A54213B00C4F84A /* UICollectionView+Helper.swift */; };
+		E06023582A542F4700C4F84A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06023572A542F4700C4F84A /* NetworkService.swift */; };
+		E060235A2A54311B00C4F84A /* ErrorMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06023592A54311B00C4F84A /* ErrorMessages.swift */; };
+		E060235C2A5431CD00C4F84A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E060235B2A5431CD00C4F84A /* Constants.swift */; };
+		E060235E2A5435FE00C4F84A /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E060235D2A5435FE00C4F84A /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		E060234F2A541D0900C4F84A /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		E06023522A541D1800C4F84A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		E06023542A54213B00C4F84A /* UICollectionView+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Helper.swift"; sourceTree = "<group>"; };
+		E06023572A542F4700C4F84A /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		E06023592A54311B00C4F84A /* ErrorMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessages.swift; sourceTree = "<group>"; };
+		E060235B2A5431CD00C4F84A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E060235D2A5435FE00C4F84A /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +159,7 @@
 		E06023492A541AC400C4F84A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E06023562A542EDE00C4F84A /* NetworkService */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -158,6 +167,7 @@
 		E060234A2A541AD500C4F84A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E060235D2A5435FE00C4F84A /* Movie.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -175,6 +185,8 @@
 			children = (
 				E06023202A54174E00C4F84A /* Assets.xcassets */,
 				E06023222A54174E00C4F84A /* LaunchScreen.storyboard */,
+				E06023592A54311B00C4F84A /* ErrorMessages.swift */,
+				E060235B2A5431CD00C4F84A /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -187,6 +199,14 @@
 				E06023522A541D1800C4F84A /* HomeViewModel.swift */,
 			);
 			path = HomeViewController;
+			sourceTree = "<group>";
+		};
+		E06023562A542EDE00C4F84A /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				E06023572A542F4700C4F84A /* NetworkService.swift */,
+			);
+			path = NetworkService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,11 +340,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E060235A2A54311B00C4F84A /* ErrorMessages.swift in Sources */,
 				E06023182A54174B00C4F84A /* AppDelegate.swift in Sources */,
+				E060235E2A5435FE00C4F84A /* Movie.swift in Sources */,
 				E060231A2A54174B00C4F84A /* SceneDelegate.swift in Sources */,
 				E06023552A54213B00C4F84A /* UICollectionView+Helper.swift in Sources */,
 				E06023502A541D0900C4F84A /* HomeViewController.swift in Sources */,
+				E06023582A542F4700C4F84A /* NetworkService.swift in Sources */,
 				E06023532A541D1800C4F84A /* HomeViewModel.swift in Sources */,
+				E060235C2A5431CD00C4F84A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
