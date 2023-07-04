@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		276D0B112A54D0430008D027 /* UIImageView+setImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276D0B102A54D0430008D027 /* UIImageView+setImage.swift */; };
+		276D0B142A54D71F0008D027 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 276D0B132A54D71F0008D027 /* Kingfisher */; };
+		276D0B162A54E2FA0008D027 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276D0B152A54E2FA0008D027 /* UIHelper.swift */; };
 		E06023182A54174B00C4F84A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06023172A54174B00C4F84A /* AppDelegate.swift */; };
 		E060231A2A54174B00C4F84A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06023192A54174B00C4F84A /* SceneDelegate.swift */; };
 		E06023212A54174E00C4F84A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E06023202A54174E00C4F84A /* Assets.xcassets */; };
@@ -47,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		276D0B102A54D0430008D027 /* UIImageView+setImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+setImage.swift"; sourceTree = "<group>"; };
+		276D0B152A54E2FA0008D027 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		E06023142A54174B00C4F84A /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E06023172A54174B00C4F84A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E06023192A54174B00C4F84A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				276D0B142A54D71F0008D027 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				E06023542A54213B00C4F84A /* UICollectionView+Helper.swift */,
+				276D0B102A54D0430008D027 /* UIImageView+setImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -199,6 +206,7 @@
 				E06023222A54174E00C4F84A /* LaunchScreen.storyboard */,
 				E06023592A54311B00C4F84A /* ErrorMessages.swift */,
 				E060235B2A5431CD00C4F84A /* Constants.swift */,
+				276D0B152A54E2FA0008D027 /* UIHelper.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -256,6 +264,9 @@
 			dependencies = (
 			);
 			name = MovieApp;
+			packageProductDependencies = (
+				276D0B132A54D71F0008D027 /* Kingfisher */,
+			);
 			productName = MovieApp;
 			productReference = E06023142A54174B00C4F84A /* MovieApp.app */;
 			productType = "com.apple.product-type.application";
@@ -328,6 +339,9 @@
 				Base,
 			);
 			mainGroup = E060230B2A54174B00C4F84A;
+			packageReferences = (
+				276D0B122A54D71F0008D027 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = E06023152A54174B00C4F84A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -379,12 +393,14 @@
 				E060235E2A5435FE00C4F84A /* Movie.swift in Sources */,
 				E060231A2A54174B00C4F84A /* SceneDelegate.swift in Sources */,
 				E06023552A54213B00C4F84A /* UICollectionView+Helper.swift in Sources */,
+				276D0B112A54D0430008D027 /* UIImageView+setImage.swift in Sources */,
 				E06023502A541D0900C4F84A /* HomeViewController.swift in Sources */,
 				E06023582A542F4700C4F84A /* NetworkService.swift in Sources */,
 				E06023532A541D1800C4F84A /* HomeViewModel.swift in Sources */,
 				E06023622A544BCA00C4F84A /* FavoritesViewController.swift in Sources */,
 				E060235C2A5431CD00C4F84A /* Constants.swift in Sources */,
 				E06023692A544DEF00C4F84A /* HomeCollectionViewCell.swift in Sources */,
+				276D0B162A54E2FA0008D027 /* UIHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -716,6 +732,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		276D0B122A54D71F0008D027 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		276D0B132A54D71F0008D027 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 276D0B122A54D71F0008D027 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E060230C2A54174B00C4F84A /* Project object */;
 }

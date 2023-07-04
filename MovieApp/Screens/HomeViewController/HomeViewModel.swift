@@ -1,22 +1,32 @@
 import Foundation
 final class HomeViewModel {
-    var movies:Movies?
+   
+    private let networkService = NetworkService.shared
+    private var onReloadNeeded: (() -> Void) = {}
+    var allMovies: [Movie] = [] {
+        didSet {
+            onReloadNeeded()
+        }
+    }
     
-   private let endPoint = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.%20desc&api_key=1e95a9686ab126555e6f5df2ed967f7a"
+    func configureOnReloadNeeded(onReloadNeeded: @escaping () -> Void) {
+        self.onReloadNeeded = onReloadNeeded
+    }
     
-    private let network = NetworkService.shared
+    func numberOfRows() -> Int {
+        allMovies.count
+    }
     
-    func showMovies() {
-        network.getMovies(from: endPoint ,completion: { [weak self] result in
+    func getMovies() {
+        networkService.getMovies(from: Constants.endPoint) { [weak self] result in
             guard let self else {return}
             switch result {
-            case .success(let movieArray):
-                self.movies = movieArray
-                print(self.movies?.results?.count)
+            case .success(let movies):
+                self.allMovies = movies.results ?? []
+                print("ahsdhahsd")
             case .failure(let error):
-                // Handle the error, if needed
                 print("Error: \(error.rawValue)")
             }
-        })
+        }
     }
 }
