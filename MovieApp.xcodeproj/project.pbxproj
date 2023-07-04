@@ -95,9 +95,12 @@
 		E06023162A54174B00C4F84A /* MovieApp */ = {
 			isa = PBXGroup;
 			children = (
+				E060234C2A541B0500C4F84A /* Utilities */,
+				E060234A2A541AD500C4F84A /* Model */,
+				E06023482A541AB600C4F84A /* Extensions */,
+				E06023492A541AC400C4F84A /* Services */,
+				E060234B2A541ADD00C4F84A /* Screens */,
 				E06023472A541A0900C4F84A /* Application */,
-				E06023202A54174E00C4F84A /* Assets.xcassets */,
-				E06023222A54174E00C4F84A /* LaunchScreen.storyboard */,
 			);
 			path = MovieApp;
 			sourceTree = "<group>";
@@ -127,6 +130,43 @@
 				E06023252A54174E00C4F84A /* Info.plist */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		E06023482A541AB600C4F84A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E06023492A541AC400C4F84A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E060234A2A541AD500C4F84A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E060234B2A541ADD00C4F84A /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		E060234C2A541B0500C4F84A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E06023202A54174E00C4F84A /* Assets.xcassets */,
+				E06023222A54174E00C4F84A /* LaunchScreen.storyboard */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
