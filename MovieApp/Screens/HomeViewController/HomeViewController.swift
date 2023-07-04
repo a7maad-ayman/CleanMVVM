@@ -1,10 +1,3 @@
-//
-//  HomeViewController.swift
-//  MovieApp
-//
-//  Created by ahmad on 04/07/2023.
-//
-
 import UIKit
 
 class HomeViewController: UIViewController {
@@ -18,7 +11,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemPink
+        view.backgroundColor = .systemGray4
         NetworkService.shared.getMovies(from: endPoint, completion: { result in
             switch result {
             case .success(let movieArray):
