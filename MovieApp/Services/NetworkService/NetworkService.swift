@@ -1,10 +1,3 @@
-//
-//  NetworkService.swift
-//  MovieApp
-//
-//  Created by ahmad on 04/07/2023.
-//
-
 import UIKit
 
 final class NetworkService {
