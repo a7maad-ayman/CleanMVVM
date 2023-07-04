@@ -17,6 +17,7 @@
 		E06023502A541D0900C4F84A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E060234E2A541D0900C4F84A /* HomeViewController.swift */; };
 		E06023512A541D0900C4F84A /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E060234F2A541D0900C4F84A /* HomeViewController.xib */; };
 		E06023532A541D1800C4F84A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06023522A541D1800C4F84A /* HomeViewModel.swift */; };
+		E06023552A54213B00C4F84A /* UICollectionView+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06023542A54213B00C4F84A /* UICollectionView+Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		E060234E2A541D0900C4F84A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E060234F2A541D0900C4F84A /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		E06023522A541D1800C4F84A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		E06023542A54213B00C4F84A /* UICollectionView+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Helper.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 		E06023482A541AB600C4F84A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E06023542A54213B00C4F84A /* UICollectionView+Helper.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 			files = (
 				E06023182A54174B00C4F84A /* AppDelegate.swift in Sources */,
 				E060231A2A54174B00C4F84A /* SceneDelegate.swift in Sources */,
+				E06023552A54213B00C4F84A /* UICollectionView+Helper.swift in Sources */,
 				E06023502A541D0900C4F84A /* HomeViewController.swift in Sources */,
 				E06023532A541D1800C4F84A /* HomeViewModel.swift in Sources */,
 			);
