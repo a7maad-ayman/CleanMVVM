@@ -22,21 +22,18 @@ final class NetworkService {
             
             guard let data else {
                 completion(.failure(.invalidData))
-                print("Ahmad")
                 return
             }
             
             do{
                 let decoder = JSONDecoder()
-                decoder.keyDecodingStrategy = .convertFromSnakeCase
                 let movies = try decoder.decode(Movies.self, from: data)
                 completion(.success(movies))
             } catch {
                 completion(.failure(.invalidData))
-                print("ahmad")
+                print(error.localizedDescription)
             }
         }
        task.resume()
     }
-    
 }
