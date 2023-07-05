@@ -9,7 +9,8 @@ class HomeCollectionViewCell: UICollectionViewCell {
         movieUIImage.layer.cornerRadius = 10
     }
     
-    func set(movie:Movie){
+    func set(movie:Movie?) {
+      guard let movie else { return }
         guard let path = movie.posterPath else {
             movieUIImage.image = UIImage(named: Constants.imagePlaceholder)
             return

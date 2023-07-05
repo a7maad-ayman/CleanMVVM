@@ -112,6 +112,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E0306A832A55974F00EC7DAD /* HomeCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				E06023672A544DEF00C4F84A /* HomeCollectionViewCell.swift */,
+				E06023682A544DEF00C4F84A /* HomeCollectionViewCell.xib */,
+			);
+			path = HomeCollectionViewCell;
+			sourceTree = "<group>";
+		};
 		E060230B2A54174B00C4F84A = {
 			isa = PBXGroup;
 			children = (
@@ -120,7 +129,9 @@
 				E06023372A54174F00C4F84A /* MovieAppUITests */,
 				E06023152A54174B00C4F84A /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		E06023152A54174B00C4F84A /* Products */ = {
 			isa = PBXGroup;
@@ -141,7 +152,6 @@
 				E06023482A541AB600C4F84A /* Extensions */,
 				E06023492A541AC400C4F84A /* Services */,
 				E060234B2A541ADD00C4F84A /* Screens */,
-				E060235F2A544BAC00C4F84A /* FavoritesViewController */,
 				E06023662A544D8200C4F84A /* Cells */,
 			);
 			path = MovieApp;
@@ -203,8 +213,9 @@
 		E060234B2A541ADD00C4F84A /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				E099CCC92A5548700050BFB8 /* DetailsViewController */,
 				E060234D2A541CEC00C4F84A /* HomeViewController */,
+				E099CCC92A5548700050BFB8 /* DetailsViewController */,
+				E060235F2A544BAC00C4F84A /* FavoritesViewController */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -252,8 +263,7 @@
 		E06023662A544D8200C4F84A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				E06023672A544DEF00C4F84A /* HomeCollectionViewCell.swift */,
-				E06023682A544DEF00C4F84A /* HomeCollectionViewCell.xib */,
+				E0306A832A55974F00EC7DAD /* HomeCollectionViewCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
