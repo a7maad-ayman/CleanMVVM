@@ -23,7 +23,6 @@ final class HomeViewModel {
             switch result {
             case .success(let movies):
                 self.allMovies = movies.results ?? []
-                print("ahsdhahsd")
             case .failure(let error):
                 print("Error: \(error.rawValue)")
             }

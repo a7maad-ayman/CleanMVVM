@@ -20,8 +20,9 @@ final class NetworkService {
                 return
             }
             
-            guard let data = data else {
+            guard let data else {
                 completion(.failure(.invalidData))
+                print("Ahmad")
                 return
             }
             
@@ -32,6 +33,7 @@ final class NetworkService {
                 completion(.success(movies))
             } catch {
                 completion(.failure(.invalidData))
+                print("ahmad")
             }
         }
        task.resume()

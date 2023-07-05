@@ -9,13 +9,11 @@ class HomeCollectionViewCell: UICollectionViewCell {
         movieUIImage.layer.cornerRadius = 10
     }
     
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        movieUIImage.image = nil
-    }
-    
-    
-    func set(movie: Movie){
-        movieUIImage.setImage(with: "http://image.tmdb.org/t/p/w185//ghBTtkCpbeHqad52ytv0aSs5FFi.jpg")
+    func set(movie:Movie){
+        guard let path = movie.posterPath else {
+            movieUIImage.image = UIImage(systemName: "slowmo")
+            return
+        }
+        movieUIImage.setImage(with: Constants.imageBaseUrl + path)
     }
 }
