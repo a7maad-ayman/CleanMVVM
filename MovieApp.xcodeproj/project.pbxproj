@@ -10,6 +10,7 @@
 		276D0B112A54D0430008D027 /* UIImageView+setImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276D0B102A54D0430008D027 /* UIImageView+setImage.swift */; };
 		276D0B142A54D71F0008D027 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 276D0B132A54D71F0008D027 /* Kingfisher */; };
 		276D0B162A54E2FA0008D027 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276D0B152A54E2FA0008D027 /* UIHelper.swift */; };
+		E0306A822A5590FC00EC7DAD /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0306A812A5590FC00EC7DAD /* DetailsViewModel.swift */; };
 		E06023182A54174B00C4F84A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06023172A54174B00C4F84A /* AppDelegate.swift */; };
 		E060231A2A54174B00C4F84A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06023192A54174B00C4F84A /* SceneDelegate.swift */; };
 		E06023212A54174E00C4F84A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E06023202A54174E00C4F84A /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		E060236A2A544DEF00C4F84A /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E06023682A544DEF00C4F84A /* HomeCollectionViewCell.xib */; };
 		E099CCCC2A5548AD0050BFB8 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E099CCCA2A5548AD0050BFB8 /* DetailsViewController.swift */; };
 		E099CCCD2A5548AD0050BFB8 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E099CCCB2A5548AD0050BFB8 /* DetailsViewController.xib */; };
+		E099CCD12A5574010050BFB8 /* netfox in Frameworks */ = {isa = PBXBuildFile; productRef = E099CCD02A5574010050BFB8 /* netfox */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,7 @@
 /* Begin PBXFileReference section */
 		276D0B102A54D0430008D027 /* UIImageView+setImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+setImage.swift"; sourceTree = "<group>"; };
 		276D0B152A54E2FA0008D027 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
+		E0306A812A5590FC00EC7DAD /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		E06023142A54174B00C4F84A /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E06023172A54174B00C4F84A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E06023192A54174B00C4F84A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E099CCD12A5574010050BFB8 /* netfox in Frameworks */,
 				276D0B142A54D71F0008D027 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,6 +186,7 @@
 		E06023492A541AC400C4F84A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E099CCCE2A5568550050BFB8 /* CoreDataService */,
 				E06023562A542EDE00C4F84A /* NetworkService */,
 			);
 			path = Services;
@@ -258,8 +263,16 @@
 			children = (
 				E099CCCA2A5548AD0050BFB8 /* DetailsViewController.swift */,
 				E099CCCB2A5548AD0050BFB8 /* DetailsViewController.xib */,
+				E0306A812A5590FC00EC7DAD /* DetailsViewModel.swift */,
 			);
 			path = DetailsViewController;
+			sourceTree = "<group>";
+		};
+		E099CCCE2A5568550050BFB8 /* CoreDataService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreDataService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +293,7 @@
 			name = MovieApp;
 			packageProductDependencies = (
 				276D0B132A54D71F0008D027 /* Kingfisher */,
+				E099CCD02A5574010050BFB8 /* netfox */,
 			);
 			productName = MovieApp;
 			productReference = E06023142A54174B00C4F84A /* MovieApp.app */;
@@ -355,6 +369,7 @@
 			mainGroup = E060230B2A54174B00C4F84A;
 			packageReferences = (
 				276D0B122A54D71F0008D027 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				E099CCCF2A5574010050BFB8 /* XCRemoteSwiftPackageReference "netfox" */,
 			);
 			productRefGroup = E06023152A54174B00C4F84A /* Products */;
 			projectDirPath = "";
@@ -405,6 +420,7 @@
 				E060235A2A54311B00C4F84A /* ErrorMessages.swift in Sources */,
 				E06023652A544BD700C4F84A /* FavoritesViewModel.swift in Sources */,
 				E06023182A54174B00C4F84A /* AppDelegate.swift in Sources */,
+				E0306A822A5590FC00EC7DAD /* DetailsViewModel.swift in Sources */,
 				E060235E2A5435FE00C4F84A /* Movie.swift in Sources */,
 				E060231A2A54174B00C4F84A /* SceneDelegate.swift in Sources */,
 				E06023552A54213B00C4F84A /* UICollectionView+Helper.swift in Sources */,
@@ -758,6 +774,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		E099CCCF2A5574010050BFB8 /* XCRemoteSwiftPackageReference "netfox" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kasketis/netfox";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -765,6 +789,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 276D0B122A54D71F0008D027 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		E099CCD02A5574010050BFB8 /* netfox */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E099CCCF2A5574010050BFB8 /* XCRemoteSwiftPackageReference "netfox" */;
+			productName = netfox;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

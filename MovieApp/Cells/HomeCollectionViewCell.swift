@@ -11,7 +11,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
     
     func set(movie:Movie){
         guard let path = movie.posterPath else {
-            movieUIImage.image = UIImage(systemName: "slowmo")
+            movieUIImage.image = UIImage(named: Constants.imagePlaceholder)
             return
         }
         movieUIImage.setImage(with: Constants.imageBaseUrl + path)
