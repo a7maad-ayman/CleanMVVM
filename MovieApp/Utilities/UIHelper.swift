@@ -6,6 +6,7 @@
 //
 
 import UIKit
+// note [aziz]: this needs to be added as extension on UICollectionViewFlowLayout
 struct UIHelper {
     static func createThreeColumnFlowLayout(to view: UIView) -> UICollectionViewFlowLayout {
         let width = view.bounds.width

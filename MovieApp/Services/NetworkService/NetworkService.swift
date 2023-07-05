@@ -4,7 +4,8 @@ final class NetworkService {
     static let shared = NetworkService()
     let cache = NSCache<NSString,UIImage> ()
     private init(){}
-    
+  // note [aziz]: refactor to a generic method to work with any decodable model
+  // note [aziz]: refactor end points handling to a more efficient way, for example: network router
     func getMovies(from endPoint: String ,completion: @escaping (Result<Movies,MAError>) -> Void ) {
 
         guard let url = URL(string: endPoint) else {

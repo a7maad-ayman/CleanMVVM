@@ -14,7 +14,7 @@ final class HomeViewModel {
     guard let allMovies else { return nil }
     return allMovies[index]
   }
-  
+  // note [aziz]: use enum for filter cases
   func getMovies(by filter:String? = nil) {
     var endPoint:String?
     if filter == Constants.mostViewed {

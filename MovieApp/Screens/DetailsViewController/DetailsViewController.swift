@@ -14,6 +14,7 @@ class DetailsViewController: UIViewController {
     
     
     //MARK: - IBoutlets
+  // note [aziz]: make private
     @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var favoriteImageView: UIImageView!
     @IBOutlet weak var rateLabel: UILabel!
@@ -21,6 +22,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var overViewTextView: UITextView!
     
     //MARK: - Properties
+  // note [aziz]: make private
     var viewModel: DetailsViewModel
     
     init(viewModel:DetailsViewModel){
@@ -39,8 +41,11 @@ class DetailsViewController: UIViewController {
         configureData()
     }
     
-    
+  // note [aziz]: make private
+  // note [aziz]: rename method, it's configuring view not data 
     func configureData() {
+      // note [aziz]: return final value only from view model
+      // note [aziz]: this method has many responsibilities
         rateLabel.text = String(describing:viewModel.movie.voteAverage)
         titleLabel.text = viewModel.movie.originalTitle
         overViewTextView.text = viewModel.movie.overview
@@ -50,6 +55,7 @@ class DetailsViewController: UIViewController {
             return }
         posterImageView.setImage(with: Constants.imageBaseUrl+path)
     }
+  // note [aziz]: remove this mark
 
     //MARK: - IBActions
     

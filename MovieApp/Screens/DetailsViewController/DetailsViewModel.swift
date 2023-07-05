@@ -6,9 +6,10 @@
 //
 
 import Foundation
+// note [aziz]: move view controller logic here
 
 final class DetailsViewModel {
-    
+  // note [aziz]: make private
     var movie:Movie
     
     init(movie: Movie) {

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+// note [aziz]: remove in case you won't use it 
 
 class FavoritesViewController: UIViewController {
 

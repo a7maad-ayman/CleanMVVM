@@ -6,6 +6,7 @@
 //
 
 import Foundation
+// note [aziz]: "MA" for what? 
 
 enum MAError: String, Error {
     case invalidURL = "This Url is invalid"
