@@ -16,9 +16,3 @@ extension UICollectionView {
         return cell
     }
 }
-// note [aziz]: every type extension needs to be in a separate file 
-extension UIView {
-    static var reuseIdentifier: String {
-        return String(describing: self)
-    }
-}

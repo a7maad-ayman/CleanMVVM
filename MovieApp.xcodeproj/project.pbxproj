@@ -11,6 +11,7 @@
 		276D0B142A54D71F0008D027 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 276D0B132A54D71F0008D027 /* Kingfisher */; };
 		276D0B162A54E2FA0008D027 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276D0B152A54E2FA0008D027 /* UIHelper.swift */; };
 		E0306A822A5590FC00EC7DAD /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0306A812A5590FC00EC7DAD /* DetailsViewModel.swift */; };
+		E05D22172A569B7B00022329 /* UIView+reuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D22162A569B7B00022329 /* UIView+reuseIdentifier.swift */; };
 		E06023182A54174B00C4F84A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06023172A54174B00C4F84A /* AppDelegate.swift */; };
 		E060231A2A54174B00C4F84A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06023192A54174B00C4F84A /* SceneDelegate.swift */; };
 		E06023212A54174E00C4F84A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E06023202A54174E00C4F84A /* Assets.xcassets */; };
@@ -57,6 +58,7 @@
 		276D0B102A54D0430008D027 /* UIImageView+setImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+setImage.swift"; sourceTree = "<group>"; };
 		276D0B152A54E2FA0008D027 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		E0306A812A5590FC00EC7DAD /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		E05D22162A569B7B00022329 /* UIView+reuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+reuseIdentifier.swift"; sourceTree = "<group>"; };
 		E06023142A54174B00C4F84A /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E06023172A54174B00C4F84A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E06023192A54174B00C4F84A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 			children = (
 				E06023542A54213B00C4F84A /* UICollectionView+Helper.swift */,
 				276D0B102A54D0430008D027 /* UIImageView+setImage.swift */,
+				E05D22162A569B7B00022329 /* UIView+reuseIdentifier.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				276D0B112A54D0430008D027 /* UIImageView+setImage.swift in Sources */,
 				E06023502A541D0900C4F84A /* HomeViewController.swift in Sources */,
 				E06023582A542F4700C4F84A /* NetworkService.swift in Sources */,
+				E05D22172A569B7B00022329 /* UIView+reuseIdentifier.swift in Sources */,
 				E06023532A541D1800C4F84A /* HomeViewModel.swift in Sources */,
 				E06023622A544BCA00C4F84A /* FavoritesViewController.swift in Sources */,
 				E060235C2A5431CD00C4F84A /* Constants.swift in Sources */,
