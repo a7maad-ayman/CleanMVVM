@@ -1,6 +1,5 @@
 import UIKit
 
-//TODO: note [aziz]: why depend on scene delegate not app delegate
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     
