@@ -1,9 +1,11 @@
 import UIKit
-// note [aziz]: every cell should be in same group as it's corresponding module, this cell should be in home group
+
 class HomeCollectionViewCell: UICollectionViewCell {
-  // note [aziz]:make private
-    @IBOutlet weak var movieUIImage: UIImageView!
+
+  //MARK: - IBOutlets
+     @IBOutlet private (set) weak var movieUIImage: UIImageView!
     
+  //MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         movieUIImage.layer.cornerRadius = 10

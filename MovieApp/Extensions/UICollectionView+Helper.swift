@@ -12,13 +12,6 @@ extension UICollectionView {
         guard let cell = dequeueReusableCell(withReuseIdentifier: T.reuseIdentifier, for: indexPath) as? T else {
             fatalError("Could not dequeue cell with identifier: \(T.reuseIdentifier)")
         }
-
         return cell
-    }
-}
-// note [aziz]: every type extension needs to be in a separate file 
-extension UIView {
-    static var reuseIdentifier: String {
-        return String(describing: self)
     }
 }
