@@ -89,5 +89,4 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     let margin: CGFloat = 10
     return UIEdgeInsets(top: margin, left: margin, bottom: margin, right: margin)
   }
-  
 }
