@@ -5,10 +5,8 @@ class HomeViewController: UIViewController {
   //MARK: - IBOutlets
   @IBOutlet weak var homeCollectionView: UICollectionView!
   
-  
   //MARK: - Properties
   private let viewModel = HomeViewModel()
-  
   
   //MARK: Life cycle
   override func viewDidLoad() {
@@ -41,25 +39,20 @@ class HomeViewController: UIViewController {
   
   func configureNavBar() {
     let menu = UIMenu(title: "Filter", children: [
-      UIAction(title: "Most Viewed", handler: { _ in
-        // note [aziz]: move completion code to a separate method
-
-        self.viewModel.getMovies(by: Constants.mostViewed)
-        DispatchQueue.main.async {
-          // note [aziz]: why reload here?, viewModel.reload already handles this
-          self.homeCollectionView.reloadData()
-        }            }),
-      UIAction(title: "Popularity", handler: { _ in
-        self.viewModel.getMovies(by: Constants.popularity)
-        DispatchQueue.main.async {
-          // note [aziz]: why reload here?, viewModel.reload already handles this
-          self.homeCollectionView.reloadData()
-        }            }),
+      UIAction(title: "Most Viewed", handler: { [weak self] _ in
+        self?.handleFilterAction(with: Constants.mostViewed)
+      }),
+      UIAction(title: "Popularity", handler: { [weak self] _ in
+        self?.handleFilterAction(with: Constants.popularity)
+      }),
     ])
     navigationItem.rightBarButtonItem = UIBarButtonItem(title: nil, image: UIImage(systemName: "list.bullet"), primaryAction: nil, menu: menu)
     
   }
   
+  private func handleFilterAction(with filter: String) {
+      viewModel.getMovies(by: filter)
+  }
 }
 
 //MARK: - UICollectionViewDataSource
@@ -82,7 +75,7 @@ extension HomeViewController: UICollectionViewDataSource {
 //MARK: - UICollectionViewDelegate
 extension HomeViewController: UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    // note [aziz]: use navigation router or coordinator to move navigation logic out of view controller
+    //TODO: note [aziz]: use navigation router or coordinator to move navigation logic out of view controller
     guard let item = viewModel.getItem(at: indexPath.row) else { return }
     let viewModel = DetailsViewModel(movie: item)
     let viewController =  DetailsViewController(viewModel: viewModel)
