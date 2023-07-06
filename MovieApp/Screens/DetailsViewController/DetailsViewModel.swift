@@ -6,14 +6,25 @@
 //
 
 import Foundation
-// note [aziz]: move view controller logic here
 
 final class DetailsViewModel {
-  // note [aziz]: make private
-    var movie:Movie
-    
-    init(movie: Movie) {
-        self.movie = movie
-    }
-   
+  
+  //MARK: - Properties
+  private var movie: Movie
+  
+  //MARK: - Initializers
+  init(movie: Movie) {
+    self.movie = movie
+  }
+  
+  func getMovieDetails() -> Movie{
+    return movie
+  }
+  
+  func getImageUrl() -> String {
+    guard let path = movie.posterPath else { return "" }
+    let url = Constants.imageBaseUrl+path
+    return url
+  }
 }
+

@@ -1,6 +1,6 @@
 import UIKit
 
-// note [aziz]: why depend on scene delegate not app delegate 
+//TODO: note [aziz]: why depend on scene delegate not app delegate
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     
@@ -14,7 +14,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         window?.rootViewController = createTabBar()
         window?.makeKeyAndVisible()
-
     }
     
     func createHomeNC() -> UINavigationController {
@@ -37,10 +36,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func createTabBar() -> UITabBarController {
             let tabbar = UITabBarController()
             UITabBar.appearance().tintColor = .systemGreen
-            //i added this
             UITabBar.appearance().backgroundColor = .systemGray4
             tabbar.viewControllers = [createHomeNC(),createFavoritesNC()]
-        
             return tabbar
         }
 
