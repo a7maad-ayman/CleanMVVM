@@ -37,3 +37,32 @@ final class NetworkService {
     task.resume()
   }
 }
+
+
+
+//MARK: Network layer depend on builder pattern
+class NetworkClient {
+    private let session: URLSession
+    
+    init(session: URLSession = .shared) {
+        self.session = session
+    }
+    
+    func fetch<T:Decodable>(request: NetworkRequest, completion: @escaping (Result<T?, Error>) -> Void) {
+        var urlComponents = URLComponents(url: request.url, resolvingAgainstBaseURL: false)!
+        urlComponents.queryItems = request.parameters.map { URLQueryItem(name: $0.key, value: String(describing: $0.value)) }
+        
+        var urlRequest = URLRequest(url: urlComponents.url!)
+        urlRequest.httpMethod = request.method.rawValue
+        urlRequest.allHTTPHeaderFields = request.headers
+        
+        let task = session.dataTask(with: urlRequest) { (data, response, error) in
+            if let error = error {
+                completion(.failure(error))
+            } else {
+              completion(.success(data as? T))
+            }
+        }
+        task.resume()
+    }
+}
