@@ -40,18 +40,17 @@ class HomeViewController: UIViewController {
   func configureNavBar() {
     let menu = UIMenu(title: "Filter", children: [
       UIAction(title: "Most Viewed", handler: { [weak self] _ in
-        self?.handleFilterAction(with: Constants.mostViewed)
+        self?.handleFilterAction(with: .mostViewed)
       }),
       UIAction(title: "Popularity", handler: { [weak self] _ in
-        self?.handleFilterAction(with: Constants.popularity)
+        self?.handleFilterAction(with: .popularity)
       }),
     ])
     navigationItem.rightBarButtonItem = UIBarButtonItem(title: nil, image: UIImage(systemName: "list.bullet"), primaryAction: nil, menu: menu)
-    
   }
   
-  private func handleFilterAction(with filter: String) {
-      viewModel.getMovies(by: filter)
+  private func handleFilterAction(with filter: Constants.MoviesFilter) {
+    viewModel.getMovies(by: filter)
   }
 }
 
@@ -65,11 +64,9 @@ extension HomeViewController: UICollectionViewDataSource {
     
     let cell:HomeCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
     cell.set(movie: viewModel.getItem(at: indexPath.row))
-    
     return cell
+    
   }
-  
-  
 }
 
 //MARK: - UICollectionViewDelegate
