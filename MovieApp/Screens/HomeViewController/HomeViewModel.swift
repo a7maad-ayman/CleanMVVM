@@ -24,11 +24,12 @@ final class HomeViewModel {
     }else{
       endPoint = Constants.endPoint
     }
-    networkService.getMovies(from: endPoint ?? Constants.endPoint) { [weak self] result in
+    
+    networkService.fetch(from: endPoint ?? Constants.endPoint) { [weak self] (result: Result<Movies?, MAError>) in
       guard let self else {return}
       switch result {
       case .success(let movies):
-        self.allMovies = movies.results
+        self.allMovies = movies?.results
         self.reload?()
       case .failure(let error):
         print("Error: \(error.rawValue)")
@@ -36,3 +37,5 @@ final class HomeViewModel {
     }
   }
 }
+
+

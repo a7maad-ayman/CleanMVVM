@@ -6,9 +6,10 @@ final class NetworkService {
     private init(){}
   // note [aziz]: refactor to a generic method to work with any decodable model
   // note [aziz]: refactor end points handling to a more efficient way, for example: network router
-    func getMovies(from endPoint: String ,completion: @escaping (Result<Movies,MAError>) -> Void ) {
+  //fetch<T:Decodable> (url:String? , compiletionHandler:@escaping (T?)->Void )
+    func fetch<T:Decodable>(from url: String ,completion: @escaping (Result<T?,MAError>) -> Void ) {
 
-        guard let url = URL(string: endPoint) else {
+        guard let url = URL(string: url) else {
             completion(.failure(.invalidURL))
             return
         }
@@ -28,8 +29,8 @@ final class NetworkService {
             
             do{
                 let decoder = JSONDecoder()
-                let movies = try decoder.decode(Movies.self, from: data)
-                completion(.success(movies))
+                let movies = try decoder.decode(T.self, from: data)
+              completion(.success(movies))
             } catch {
                 completion(.failure(.invalidData))
                 print(error.localizedDescription)
