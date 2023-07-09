@@ -17,14 +17,22 @@ final class DetailsViewModel {
     self.movie = movie
   }
   
-  func getMovieDetails() -> Movie{
-    return movie
-  }
-  
-  func getImageUrl() -> String {
+  var getImageUrl: String{
     guard let path = movie.posterPath else { return "" }
     let url = Constants.imageBaseUrl+path
     return url
+  }
+  
+  var rate: String{
+    return String(describing:movie.voteAverage)
+  }
+  
+  var title: String{
+    return movie.originalTitle
+  }
+  
+  var description: String{
+    return movie.overview ?? ""
   }
 }
 

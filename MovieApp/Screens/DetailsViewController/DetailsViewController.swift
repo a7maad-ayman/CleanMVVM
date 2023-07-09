@@ -37,11 +37,10 @@ class DetailsViewController: UIViewController {
   }
   
   private func configureView() {
-    let movie = viewModel.getMovieDetails()
-    rateLabel.text = String(describing:movie.voteAverage)
-    titleLabel.text = movie.originalTitle
-    overViewTextView.text = movie.overview
-    posterImageView.setImage(with: viewModel.getImageUrl())
+    rateLabel.text = viewModel.rate
+    titleLabel.text = viewModel.title
+    overViewTextView.text = viewModel.description
+    posterImageView.setImage(with: viewModel.getImageUrl)
     view.backgroundColor = .systemBackground
   }
 }
