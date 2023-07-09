@@ -1,7 +1,7 @@
 import Foundation
 final class HomeViewModel {
   
-  private let networkClient = NetworkClient()
+  private let networkClient = NetworkService()
   private var allMovies: [Movie]?
   
   var reload: (() -> Void)?
@@ -16,10 +16,9 @@ final class HomeViewModel {
   }
   
   func getMovies(by filter:Constants.MoviesFilter? = nil) {
-    let url = Constants.baseURL + (filter?.rawValue ?? "") + Constants.apiKey
     let request = NetworkRequestBuilder()
-      .setURL(URL(string:  url)!)
-      .setMethod(.get)
+      .setURL(URL(string: Constants.baseURL)!)
+      .setQueryParameters(["sort_by": filter?.rawValue ?? "","api_key": Constants.apiKey])
       .build()
     
     networkClient.fetch(request: request) {[weak self] (result: Result<Movies?, MAError>) in
