@@ -7,7 +7,6 @@ class HomeViewController: UIViewController {
   
   //MARK: - Properties
   private let viewModel = HomeViewModel()
-  
   //MARK: Life cycle
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -57,7 +56,7 @@ class HomeViewController: UIViewController {
 //MARK: - UICollectionViewDataSource
 extension HomeViewController: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    viewModel.numberOfRows
+    viewModel.moviesCount
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
