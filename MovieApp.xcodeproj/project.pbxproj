@@ -39,6 +39,7 @@
 		E099CCCC2A5548AD0050BFB8 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E099CCCA2A5548AD0050BFB8 /* DetailsViewController.swift */; };
 		E099CCCD2A5548AD0050BFB8 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E099CCCB2A5548AD0050BFB8 /* DetailsViewController.xib */; };
 		E099CCD12A5574010050BFB8 /* netfox in Frameworks */ = {isa = PBXBuildFile; productRef = E099CCD02A5574010050BFB8 /* netfox */; };
+		E0F139CF2A5AB64300843B48 /* QueryParameterKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F139CE2A5AB64300843B48 /* QueryParameterKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		E06023682A544DEF00C4F84A /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		E099CCCA2A5548AD0050BFB8 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		E099CCCB2A5548AD0050BFB8 /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
+		E0F139CE2A5AB64300843B48 /* QueryParameterKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryParameterKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +270,7 @@
 				E06023572A542F4700C4F84A /* NetworkService.swift */,
 				E05D22212A56F08100022329 /* HTTPMethod.swift */,
 				E05D22232A56F1B900022329 /* NetworkBuilderRequest.swift */,
+				E0F139CE2A5AB64300843B48 /* QueryParameterKey.swift */,
 			);
 			path = NetworkService;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				E06023552A54213B00C4F84A /* UICollectionView+Helper.swift in Sources */,
 				E05D22242A56F1B900022329 /* NetworkBuilderRequest.swift in Sources */,
 				E05D221C2A56DE0500022329 /* Coordinator.swift in Sources */,
+				E0F139CF2A5AB64300843B48 /* QueryParameterKey.swift in Sources */,
 				276D0B112A54D0430008D027 /* UIImageView+setImage.swift in Sources */,
 				E06023502A541D0900C4F84A /* HomeViewController.swift in Sources */,
 				E06023582A542F4700C4F84A /* NetworkService.swift in Sources */,

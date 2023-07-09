@@ -9,4 +9,5 @@ final class Constants {
     case popularity = "Popularity"
   }
   static let imagePlaceholder = "placeholder"
+  
 }

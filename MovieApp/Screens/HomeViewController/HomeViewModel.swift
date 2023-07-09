@@ -16,9 +16,11 @@ final class HomeViewModel {
   }
   
   func getMovies(by filter:Constants.MoviesFilter? = nil) {
+    guard let url = URL(string: Constants.baseURL) else { return }
     let request = NetworkRequestBuilder()
-      .setURL(URL(string: Constants.baseURL)!)
-      .setQueryParameters(["sort_by": filter?.rawValue ?? "","api_key": Constants.apiKey])
+      .setURL(url)
+      .setQueryParameters(key: filter == nil ? nil : .sortBy, value: filter?.rawValue ?? "")
+      .setQueryParameters(key: .apiKey, value: Constants.apiKey)
       .build()
     
     networkClient.fetch(request: request) {[weak self] (result: Result<Movies?, MAError>) in

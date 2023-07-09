@@ -9,7 +9,7 @@ import Foundation
 class NetworkRequestBuilder {
   private var url: URL?
   private var method: HTTPMethod?
-  private var queryParameters: [String: String] = [:]
+  private var queryParameters: [QueryParameterKey?: String] = [:]
 
   
   func setURL(_ url: URL) -> Self {
@@ -22,8 +22,8 @@ class NetworkRequestBuilder {
     return self
   }
   
-  func setQueryParameters(_ parameters: [String: String]) -> Self {
-    self.queryParameters = parameters
+  func setQueryParameters(key: QueryParameterKey?, value: String) -> Self {
+    self.queryParameters[key ?? nil] = value
     return self
   }
   
@@ -31,7 +31,7 @@ class NetworkRequestBuilder {
     guard let url = url else {return nil}
     guard var components = URLComponents(url: url, resolvingAgainstBaseURL: false) else { return nil}
   
-    let queryItems = queryParameters.map { URLQueryItem(name: $0.key, value: $0.value) }
+    let queryItems = queryParameters.compactMap { URLQueryItem(name: $0.key?.rawValue ?? "", value: $0.value) }
     components.queryItems = queryItems
 
     return components.url
