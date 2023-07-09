@@ -8,5 +8,5 @@ final class Constants {
     case mostViewed = "&sort_by=MostViewed"
     case popularity = "&sort_by=Popularity"
   }
-  static let imagePlaceholder = "palceholder"
+  static let imagePlaceholder = "placeholder"
 }
