@@ -10,6 +10,8 @@
 		276D0B112A54D0430008D027 /* UIImageView+setImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276D0B102A54D0430008D027 /* UIImageView+setImage.swift */; };
 		276D0B142A54D71F0008D027 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 276D0B132A54D71F0008D027 /* Kingfisher */; };
 		E0306A822A5590FC00EC7DAD /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0306A812A5590FC00EC7DAD /* DetailsViewModel.swift */; };
+		E03770FB2A5BE69000B8B1E1 /* HomeRepositoryContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03770FA2A5BE69000B8B1E1 /* HomeRepositoryContract.swift */; };
+		E03770FE2A5BE80100B8B1E1 /* HomeViewModelContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03770FD2A5BE80100B8B1E1 /* HomeViewModelContract.swift */; };
 		E048D4252A5AD1FB00D3D6BB /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E048D4242A5AD1FB00D3D6BB /* HomeRepository.swift */; };
 		E048D4272A5ADA9800D3D6BB /* GetMoviesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E048D4262A5ADA9800D3D6BB /* GetMoviesUseCase.swift */; };
 		E05D22172A569B7B00022329 /* UIView+reuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D22162A569B7B00022329 /* UIView+reuseIdentifier.swift */; };
@@ -61,6 +63,8 @@
 /* Begin PBXFileReference section */
 		276D0B102A54D0430008D027 /* UIImageView+setImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+setImage.swift"; sourceTree = "<group>"; };
 		E0306A812A5590FC00EC7DAD /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		E03770FA2A5BE69000B8B1E1 /* HomeRepositoryContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepositoryContract.swift; sourceTree = "<group>"; };
+		E03770FD2A5BE80100B8B1E1 /* HomeViewModelContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelContract.swift; sourceTree = "<group>"; };
 		E048D4242A5AD1FB00D3D6BB /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
 		E048D4262A5ADA9800D3D6BB /* GetMoviesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMoviesUseCase.swift; sourceTree = "<group>"; };
 		E05D22162A569B7B00022329 /* UIView+reuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+reuseIdentifier.swift"; sourceTree = "<group>"; };
@@ -131,6 +135,23 @@
 			path = HomeCollectionViewCell;
 			sourceTree = "<group>";
 		};
+		E03770F92A5BE67E00B8B1E1 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E03770FA2A5BE69000B8B1E1 /* HomeRepositoryContract.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		E03770FF2A5BEDCF00B8B1E1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E06023522A541D1800C4F84A /* HomeViewModel.swift */,
+				E03770FD2A5BE80100B8B1E1 /* HomeViewModelContract.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		E048D41A2A5ACF9D00D3D6BB /* Features */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,8 +164,8 @@
 		E048D41B2A5AD0D000D3D6BB /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				E03770FF2A5BEDCF00B8B1E1 /* ViewModel */,
 				E048D41C2A5AD0EA00D3D6BB /* View */,
-				E06023522A541D1800C4F84A /* HomeViewModel.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -171,6 +192,7 @@
 		E048D41E2A5AD12200D3D6BB /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				E03770F92A5BE67E00B8B1E1 /* Protocols */,
 				E048D4242A5AD1FB00D3D6BB /* HomeRepository.swift */,
 			);
 			path = Data;
@@ -506,6 +528,7 @@
 				E060231A2A54174B00C4F84A /* SceneDelegate.swift in Sources */,
 				E06023552A54213B00C4F84A /* UICollectionView+Helper.swift in Sources */,
 				E05D22242A56F1B900022329 /* NetworkBuilderRequest.swift in Sources */,
+				E03770FE2A5BE80100B8B1E1 /* HomeViewModelContract.swift in Sources */,
 				E05D221C2A56DE0500022329 /* Coordinator.swift in Sources */,
 				E0F139CF2A5AB64300843B48 /* QueryParameterKey.swift in Sources */,
 				276D0B112A54D0430008D027 /* UIImageView+setImage.swift in Sources */,
@@ -517,6 +540,7 @@
 				E05D221E2A56DE4600022329 /* AppCoordinator.swift in Sources */,
 				E060235C2A5431CD00C4F84A /* Constants.swift in Sources */,
 				E06023692A544DEF00C4F84A /* HomeCollectionViewCell.swift in Sources */,
+				E03770FB2A5BE69000B8B1E1 /* HomeRepositoryContract.swift in Sources */,
 				E099CCCC2A5548AD0050BFB8 /* DetailsViewController.swift in Sources */,
 				E05D22222A56F08100022329 /* HTTPMethod.swift in Sources */,
 			);

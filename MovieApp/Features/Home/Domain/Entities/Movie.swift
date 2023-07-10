@@ -1,10 +1,3 @@
-//
-//  Movie.swift
-//  MovieApp
-//
-//  Created by ahmad on 04/07/2023.
-//
-
 import Foundation
 
 struct Movies: Decodable {
