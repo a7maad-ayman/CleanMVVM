@@ -1,10 +1,3 @@
-//
-//  NetworkBuilderRequest.swift
-//  MovieApp
-//
-//  Created by ahmad on 06/07/2023.
-//
-
 import Foundation
 class NetworkRequestBuilder {
   private var url: URL?

@@ -1,24 +1,26 @@
-//
-//  GetMoviesUseCase.swift
-//  MovieApp
-//
-//  Created by ahmad on 09/07/2023.
-//
-
 import Foundation
+import Combine
 
+//MARK: -  GetMoviesUseCaseContract protocol
 protocol GetMoviesUseCaseContract {
-  func execute(by filter:Constants.MoviesFilter?, handler: @escaping (Movies?)->Void)
+  func execute(by filter: Constants.MoviesFilter?) -> AnyPublisher<Movies?, Error>
 }
 
-class GetMoviesUseCase: GetMoviesUseCaseContract {
+
+//MARK: -  GetMoviesUseCaseContract class
+final class GetMoviesUseCase: GetMoviesUseCaseContract {
   private let homeRepository: HomeRepositoryContract
   
   init(homeRepository: HomeRepositoryContract = HomeRepository()) {
     self.homeRepository = homeRepository
   }
   
-  func execute(by filter:Constants.MoviesFilter? = nil, handler: @escaping (Movies?)->Void){
-    homeRepository.getMovies(by: filter, handler: handler)
+  func execute(by filter: Constants.MoviesFilter? = nil) -> AnyPublisher<Movies?, Error> {
+    return homeRepository.getMovies(by: filter)
+      .mapError { error -> Error in
+        print("Error\(error.localizedDescription)")
+        return error
+      }
+      .eraseToAnyPublisher()
   }
 }
